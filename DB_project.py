@@ -42,11 +42,9 @@ class MainWindow(QMainWindow,Uiform):
 
         response=Menu_All()
         if (response.status_code == 200):
-            MenuList=response.json()['Grid_20150827000000000226_1']['row']
+            self.MenuList=response.json()['Grid_20150827000000000226_1']['row']
         else:
             print(f'Error code : {response}')
-
-        self.MenuList=MenuList['Grid_20150827000000000226_1']['row']
 
         result = curs.execute("select 이름 from MyIngredient where 분류='주재료'")
         conn.commit()
