@@ -42,7 +42,7 @@ class MainWindow(QMainWindow,Uiform):
 
         response=Menu_All()
         if (response.status_code == 200):
-            self.MenuList=response.json()['Grid_20150827000000000226_1']['row']
+            MenuList=response.json()['Grid_20150827000000000226_1']['row']
         else:
             print(f'Error code : {response}')
 
