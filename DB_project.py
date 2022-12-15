@@ -40,17 +40,11 @@ class MainWindow(QMainWindow,Uiform):
         super(MainWindow,self).__init__(*args,**kwrgs)
         self.setupUi(self)
 
-        # response=Menu_All()
-        # if (response.status_code == 200):
-        #     self.MenuList=response.json()['Grid_20150827000000000226_1']['row']
-        # else:
-        #     print(f'Error code : {response}')
-
-        # with open("./MenuList.json", 'w') as outfile:
-        #     json.dump(response.json(), outfile)
-
-        with open("./MenuList.json", "r") as json_file:
-            MenuList = json.load(json_file)
+        response=Menu_All()
+        if (response.status_code == 200):
+            self.MenuList=response.json()['Grid_20150827000000000226_1']['row']
+        else:
+            print(f'Error code : {response}')
 
         self.MenuList=MenuList['Grid_20150827000000000226_1']['row']
 
