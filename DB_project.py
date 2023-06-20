@@ -9,7 +9,7 @@ from datetime import datetime
 conn = sqlite3.connect("C:/Users/LeeTaeHUn/OneDrive - inu.ac.kr/Study/3-2/데이터베이스/DBproject.db")
 curs = conn.cursor()
 
-key = "35147faa392b90af8e94027a1380bd601a2cf624a399a320b0449554ced86cb3"
+key = "???"
 
 Uiform = uic.loadUiType("DBproject.ui")[0]
 
